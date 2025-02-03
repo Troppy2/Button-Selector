@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <title>Button Color Picker</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="Smiling.jpeg" />
+  </head>
+  <body>
+    <!--Header & navigation bar-->
+    <header>
+      <h1>Button Game</h1>
+      <nav>
+        <ul>
+          <li><a href="#" id="link-2">Spin</a></li>
+          <li><a href="#" id="link-3">Shrink</a></li>
+          <li><a href="#" id="link-4">Grow</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Choose an Action</h1>
+        <button>Custom Button</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Lorem Ispum</p>
+    </footer>
+    <!---JS Script for the buttons actions-->
+    <script>
+      const button = document.querySelector("button");
+      document.getElementById("link-2").addEventListener("click", spinButton);
+      document.getElementById("link-3").addEventListener("click", shrinkButton);
+      document.getElementById("link-4").addEventListener("click", growButton);
+      //Button spinning function
+      function spinButton(event) {
+        event.preventDefault();
+        button.style.transform = "rotate(360deg)";//Start 360 deg
+        setTimeout(() => {
+          button.style.transform = "rotate(0deg)";//end 0 deg/ Orginal position
+        }, 1000);
+      }
+      //shrinking function
+      function shrinkButton(event) {
+        event.preventDefault();
+        button.style.transform = "scale(0.5)";//Transform size of button
+        setTimeout(() => {
+          button.style.transform = "scale(1)";//return to orginal size
+        }, 1000);
+      }
+
+      function growButton(event) {
+        event.preventDefault();
+        button.style.transform = "scale(1.5)";//Transform size of button
+        setTimeout(() => {
+          button.style.transform = "scale(1)";//return to orginal size
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

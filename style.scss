@@ -1,0 +1,84 @@
+// Global styles vars
+$primary-color: #3498db;
+$hover-color: #2980b9;
+$background-dark: #333;
+$background-light: #444;
+$text-color: white;
+//global styles
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+//Header styliong
+header {
+  width: 100%;
+  background-color: $background-dark;
+  color: $text-color;
+  font-size: 24px;
+  text-align: center;
+  padding: 15px 0;
+}
+//nav bar styling
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: $background-dark;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  display: block;
+  color: $text-color;
+  padding: 10px 20px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($background-light, 10%);
+  }
+}
+//main body styling
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+}
+//button styline
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  background-color: $primary-color;
+  color: $text-color;
+  cursor: pointer;
+  transition: transform 0.3s ease;//smoother rotation when function is accessed 
+//hover function
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+//footer styling--keeps at the bottom of the page
+footer {
+  width: 100%;
+  background-color: $background-dark;
+  color: $text-color;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+
+
